@@ -39,7 +39,7 @@ class BMIViewController: UIViewController {
         var height = (tblHeight.text! as NSString).doubleValue
         let inch = (tblIches.text! as NSString).doubleValue
         var weight = (tblWeight.text! as NSString).doubleValue
-        height = (height + inch) * 0.3048
+        height = height * 0.3048 + inch * 0.0254
         weight = weight * 0.4535
         let bmi = weight / pow(height, 2)
         
